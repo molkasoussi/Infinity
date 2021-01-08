@@ -1,11 +1,10 @@
 
-typedef struct 
-{ 	char jour [30];
- 	char  mois[30];
-	char annee[30];
-	char  id [30];
-	char  val [30];
-}abscence ;
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <gtk/gtk.h>
+
+
 typedef struct
 {
     char jour[30];
@@ -16,24 +15,19 @@ typedef struct
 typedef struct 
 {
 char identifiant[30];
-char Nom[30];
-char Prenom[30];
-char Cin[30];
-char Sexe[30];
-
+char poids[30];
+char type[30];
+char genre[30];
+char etat[30];
 date naissance;
-} ouvrier;
+} troupeaux;
 
-void ajouter (ouvrier t );
-int exister (char*identifiant);
+void ajouter (troupeaux t );
 void supprimer (char identifiant[]);
-void modifer(char ch[] ,ouvrier t2);
-void afficher(GtkWidget* treeview1 ,char *l);
-void rechercher_ouv(char identifiant[],GtkWidget *liste);
+void modifer(char ch[] ,troupeaux t2);
+int count(char type[]);
+int chercher(char ty[],troupeaux *p);
+int chercher_id(char ty[],troupeaux *p);
 
 
-
-void afficher_abs(GtkWidget* treeview2,char *l);
-void remplir(abscence a);
-float taux_absc(char annee[]);
-//float taux_absc(char ouvrier[] , char abs[] , int annee);
+//int exister (char*identifiant);
